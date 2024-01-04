@@ -5,13 +5,13 @@
 int main()
 {
 
-	int i;
-	osip_t *osip;
+    int i;
+    osip_t *osip;
 
- 	i = osip_init(&osip);
-	if (i!=0) {
-		fprintf(stderr, "ERROR!!\n");
-		return -1;
-	}
-	return 0;
+    i = osip_init(&osip);
+    if (i!=0) {
+        fprintf(stderr, "ERROR!!\n");
+        return -1;
+    }
+    return 0;
 }

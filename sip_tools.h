@@ -11,8 +11,6 @@
 #define _SIP_TOOLS_H
 
 
-
-
 #include "common.h"
 #include "tools.h"
 #include "network.h"
@@ -30,11 +28,9 @@
 #include <eXosip2/eXosip.h>
 
 
-
 /**/
 
 #define  SIP_USLEEP_TIME 10000
-
 
 
 typedef struct _sip_param
@@ -88,12 +84,9 @@ typedef struct _sip_param
 } sip_param;
 
 
-
-
 void sip_param_init(sip_param* param);
 void sip_param_free(sip_param* param);
 int  sip_terminate(sip_param* param);
-
 
 int  sip_regist_send(sip_param* param);
 int  sip_regist_answer(sip_param* param);
@@ -102,7 +95,6 @@ int  sip_regist_resend(sip_param* param);
 
 int  sip_regist_thread(sip_param* param);
 static void*  sip_regist_thread_loop(void* arg);
-
 
 int  sip_invite_send(sip_param* param);
 int  sip_invite_answer(sip_param* param);
@@ -119,10 +111,6 @@ int  sip_send_ack(sip_param* param);
 int  sip_event_get(sip_param* param);
 int  sip_process_fork(sip_param* param);
 
-
 /**/
-
-
-
 
 #endif

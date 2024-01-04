@@ -1,7 +1,5 @@
 
-
 #include  "sip_session.h"
-
 
 #define  MAX_ARGS   100
 #define  SIP_PORTNO "5060"
