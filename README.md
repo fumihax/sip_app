@@ -4,5 +4,5 @@
 A program that can initiate a session between any two programs.  
 For example, it can automatically start a session between two programs via OpenVPN.
 
-- [Wiki](https://polaris.star-dust.jp/pukiwiki/?sip_app)
+- [Wiki](https://polaris.star-dust.jp/pukiwiki/?sip_app) (Japanese Text)
 - [Document](https://github.com/fumihax/sip_app/blob/main/Doc/sip_app.pdf)  (Japanese Text)
