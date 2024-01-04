@@ -1,0 +1,4 @@
+*.o
+udp_s
+udp_c
+sip_app
