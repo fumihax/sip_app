@@ -123,9 +123,9 @@ sdp_message_t*  sdp_get_body(sip_param* param)
 {
     sdp_message_t* sdp = NULL;
 
-    sdp = eXosip_get_remote_sdp(param->did);
+    sdp = eXosip_get_remote_sdp(param->context, param->did);
     if (sdp==NULL) {
-        sdp = eXosip_get_remote_sdp_from_tid(param->tid);
+        sdp = eXosip_get_remote_sdp_from_tid(param->context, param->tid);
     }
 
     return sdp;

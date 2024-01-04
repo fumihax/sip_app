@@ -37,16 +37,16 @@ int  main(int argc, char** argv)
 ////////////////////////////////////////////////////////////////
 //     引数処理
 //
-    progname   = make_Buffer(LNAME);
-    hostname   = make_Buffer(LNAME);
-    username   = make_Buffer(LNAME);
-    invtname   = make_Buffer(LNAME);
-    portnum    = make_Buffer(LNAME);
+    progname     = make_Buffer(LNAME);
+    hostname     = make_Buffer(LNAME);
+    username     = make_Buffer(LNAME);
+    invtname     = make_Buffer(LNAME);
+    portnum      = make_Buffer(LNAME);
     vpn_portnum  = make_Buffer(LNAME);
     vpn_localip  = make_Buffer(LNAME);
     vpn_remoteip = make_Buffer(LNAME);
     logfile      = make_Buffer(LNAME);
-    DebugMode  = OFF;
+    DebugMode    = OFF;
 
     for (i=1; i<argc; i++) {
         if      (!strcmp(argv[i],"-p")) { if (i!=argc-1) copy_s2Buffer(argv[i+1], &portnum);}
@@ -70,7 +70,7 @@ int  main(int argc, char** argv)
             args[j] = NULL;
         }
     }
-    if (hostname.buf[0]=='\0' || username.buf[0]=='\0' || progname.buf=='\0') {
+    if (hostname.buf[0]=='\0' || username.buf[0]=='\0' || progname.buf[0]=='\0') {
         print_message("Usage... %s -s proxy[:port] -u user [-p port] [-t call_user] [-v vpn_wait_port] [-l vpn_localip] [-r vpn_remoteip] [-f log_file] [-d] -m program [args]\n", argv[0]);
         exit(1);
     }
@@ -215,22 +215,26 @@ int  main(int argc, char** argv)
 ////////////////////////////////////////////////////////////////
 //    eXosip 初期化
 //
-    err = eXosip_init();
+    struct eXosip_t* context;
+
+    err = eXosip_init(context);
     if (err!=0) {
         if (Logf!=NULL) fclose(Logf);
         print_message("main: eXosip_init: ERROR!!\n");
         exit(1);
     }
 
-    err = eXosip_listen_addr(IPPROTO_UDP, NULL, mport, AF_INET, 0);
+    err = eXosip_listen_addr(context, IPPROTO_UDP, NULL, mport, AF_INET, 0);
     if (err!=0) {
         print_message("main: eXosip_listen_addr: ERROR!! mport = %d\n", mport);
-        eXosip_quit();
+        eXosip_quit(context);
         exit(1);
     }
 
-    eXosip_set_user_agent("SIP for APP b1 rev.27");
-    eXosip_add_authentication_info("infosys", "infosys", "infosysipass", NULL, NULL);
+    eXosip_set_user_agent(context, "SIP for APP b1 rev.27");
+    eXosip_add_authentication_info(context, "infosys", "infosys", "infosysipass", NULL, NULL);
+
+    SIP_param.context = context;
 
 ////////////////////////////////////////////////////////////////
 //    SIP
@@ -239,7 +243,6 @@ int  main(int argc, char** argv)
     do {
         err = send_regist(&SIP_param);        
     } while(err!=EXOSIP_REGISTRATION_SUCCESS);
-
 
     // INVITE 送信
     if (invite==ON) {
@@ -282,18 +285,19 @@ int  main(int argc, char** argv)
 //
 // for メインプロセス
 //
+
 void  sip_main_term(int signal)
 {  
-    int err;
+	int err;
 
-    err = sip_terminate(&SIP_param); 
-    if (err==1) return;        // スレッドはそのままリターンさせる．
-    
-    if (Logf!=NULL) {
-        fclose(Logf);
-        Logf = NULL;
-    }
-    exit(signal);
+	err = sip_terminate(&SIP_param); 
+	if (err==1) return;		// スレッドはそのままリターンさせる．
+	
+	if (Logf!=NULL) {
+		fclose(Logf);
+		Logf = NULL;
+	}
+	exit(signal);
 }
 
 

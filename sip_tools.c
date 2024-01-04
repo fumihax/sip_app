@@ -5,6 +5,7 @@
 
 #include "sip_tools.h"
 #include "sdp_tools.h"
+#include <pthread.h>
 
 
 /**
@@ -18,52 +19,52 @@ SIP用パラメータを初期化する．
 */
 void  sip_param_init(sip_param* param)
 {
-    param->tid   = -1;
-    param->rid   = -1;
-    param->iid   = -1;
-    param->cid   = 0;
-    param->did   = 0;
+    param->tid          = -1;
+    param->rid          = -1;
+    param->iid          = -1;
+    param->cid          = 0;
+    param->did          = 0;
 
-    param->type   = -1;
-    param->auth   = ON;
-    param->server = ON;
-    param->cpid   = -1;
-    param->ppid   = -1;
+    param->type         = -1;
+    param->auth         = ON;
+    param->server       = ON;
+    param->cpid         = -1;
+    param->ppid         = -1;
 
-    param->prog = NULL;
-    param->argv = NULL;
-    param->env  = NULL;
+    param->prog         = NULL;
+    param->argv         = NULL;
+    param->env          = NULL;
 
-    param->inInvite  = OFF;
-    param->inRegist  = OFF;
-    param->inSession = OFF;
-    param->inWait    = OFF;
-    param->inExit    = OFF;
-    param->inChild   = OFF;
+    param->inInvite     = OFF;
+    param->inRegist     = OFF;
+    param->inSession    = OFF;
+    param->inWait       = OFF;
+    param->inExit       = OFF;
+    param->inChild      = OFF;
 
-    param->from      = NULL;
-    param->to        = NULL;
-    param->proxy     = NULL;
-    param->contact   = NULL;
-    param->expires   = 3600;
+    param->from         = NULL;
+    param->to           = NULL;
+    param->proxy        = NULL;
+    param->contact      = NULL;
+    param->expires      = 3600;
 
-    param->localip   = NULL;
-    param->remoteip  = NULL;
-    param->username  = NULL;
-    param->media     = NULL;
-    param->protocol  = NULL;
-    param->fmtlist   = NULL;
-    param->keytype   = NULL;
-    param->keydata   = NULL;
-    param->localport = 0;
-    param->remoteport= 0;
+    param->localip      = NULL;
+    param->remoteip     = NULL;
+    param->username     = NULL;
+    param->media        = NULL;
+    param->protocol     = NULL;
+    param->fmtlist      = NULL;
+    param->keytype      = NULL;
+    param->keydata      = NULL;
+    param->localport    = 0;
+    param->remoteport   = 0;
 
-    param->mssg      = NULL;
-    param->rgst      = NULL;
-    param->invt      = NULL;
+    param->mssg         = NULL;
+    param->rgst         = NULL;
+    param->invt         = NULL;
 
-    param->vpn_localip   = NULL;
-    param->vpn_remoteip  = NULL;
+    param->vpn_localip  = NULL;
+    param->vpn_remoteip = NULL;
 }
 
 
@@ -79,8 +80,8 @@ SIP用パラメータ変数をクリアする．@n
 */
 void  sip_param_free(sip_param* param)
 {
-    if (param->prog!=NULL)        free(param->prog);
-//    if (param->argv!=NULL)       free(param->argv);
+    if (param->prog!=NULL)     free(param->prog);
+//    if (param->argv!=NULL)      free(param->argv);
 //    if (param->env!=NULL)       free(param->env);
 
     if (param->from!=NULL)     free(param->from);
@@ -141,10 +142,10 @@ int  sip_terminate(sip_param* param)
         param->expires = 0;
         sip_regist_resend(param);
 
-        eXosip_lock();
-        eXosip_register_remove(param->rid);
-        eXosip_unlock();
-        eXosip_quit();
+        eXosip_lock(param->context);
+        eXosip_register_remove(param->context, param->rid);
+        eXosip_unlock(param->context);
+        eXosip_quit(param->context);
 
         sip_param_free(param);
         return 0;
@@ -160,7 +161,7 @@ int  sip_terminate(sip_param* param)
 //
 
 /**
-int sip_regist_send_and_answer(sip_param* param)
+int  sip_regist_send_and_answer(sip_param* param)
 
 パラメータの内容に従って，サーバへレジストして返答を待つ．
 
@@ -169,7 +170,7 @@ int sip_regist_send_and_answer(sip_param* param)
 @retval 0 以上:  レジストに対する eXosipメッセージ  see /usr/local/include/eXosip2/eXosip.h
 @retval 0 未満:  エラー
 */
-int sip_regist_send_and_answer(sip_param* param)
+int  sip_regist_send_and_answer(sip_param* param)
 {
     int err;
 
@@ -206,16 +207,16 @@ int  sip_regist_send(sip_param* param)
 {
     int err;
 
-    eXosip_lock();
-    err = eXosip_register_build_initial_register(param->from, param->proxy, param->contact, param->expires, &(param->rgst));
+    eXosip_lock(param->context);
+    err = eXosip_register_build_initial_register(param->context, param->from, param->proxy, param->contact, param->expires, &(param->rgst));
     param->rid = err;
     if (err<0) {
-        eXosip_unlock();
+        eXosip_unlock(param->context);
         return err;
     }
 
-    err = eXosip_register_send_register(param->rid, param->rgst);
-    eXosip_unlock();
+    err = eXosip_register_send_register(param->context, param->rid, param->rgst);
+    eXosip_unlock(param->context);
     return err;
 }
 
@@ -234,15 +235,15 @@ int  sip_regist_resend(sip_param* param)
 {
     int err;
 
-    eXosip_lock();
-    err = eXosip_register_build_register(param->rid, param->expires, &(param->rgst));
+    eXosip_lock(param->context);
+    err = eXosip_register_build_register(param->context, param->rid, param->expires, &(param->rgst));
     if (err<0) {
-        eXosip_unlock();
+        eXosip_unlock(param->context);
         return err;
     }
 
-    err = eXosip_register_send_register(param->rid, param->rgst);  
-    eXosip_unlock();
+    err = eXosip_register_send_register(param->context, param->rid, param->rgst);  
+    eXosip_unlock(param->context);
     return err;
 }
 
@@ -265,7 +266,7 @@ int  sip_regist_answer(sip_param* param)
     eXosip_event_t *event;
 
     Loop {
-          event = eXosip_event_wait(0, 0);
+          event = eXosip_event_wait(param->context, 0, 0);
           if (event==NULL) {
             usleep(SIP_USLEEP_TIME);
             continue;
@@ -296,7 +297,7 @@ int  sip_regist_answer(sip_param* param)
         param->type = etype;
         param->cid  = event->cid;
         param->did  = event->did;
-          eXosip_event_free(event);
+        eXosip_event_free(event);
         if (brk_flg==ON) break;
     }
 
@@ -322,7 +323,7 @@ int  sip_regist_thread(sip_param* param)
     int err;
     pthread_t reg_thread;
 
-    err = pthread_create(&reg_thread, NULL, sip_regist_thread_loop, (void*)param);
+    err = pthread_create(&reg_thread, NULL, (void*)sip_regist_thread_loop, (void*)param);
     if (err!=0) {
         DEBUG_MODE print_message("sip_regist_thread: Thread Create Failure.\n");
     }
@@ -342,7 +343,7 @@ sip_regist_thread() から呼び出されるスレッド本体．@n
 
 @param  SIP用パラメータ void* へキャスト．
 */
-static void*  sip_regist_thread_loop(void* arg)
+static void  sip_regist_thread_loop(void* arg)
 {
     int err;
     int exp;
@@ -393,7 +394,7 @@ static void*  sip_regist_thread_loop(void* arg)
 //
 
 /**
-int sip_invite_send_and_answer(sip_param* param)
+int  sip_invite_send_and_answer(sip_param* param)
 
 パラメータの内容に従って，インバイトを送信して返答を待つ．
 
@@ -402,7 +403,7 @@ int sip_invite_send_and_answer(sip_param* param)
 @retval 0 以上:  インバイトに対する eXosipメッセージ  see /usr/local/include/eXosip2/eXosip.h
 @retval 0 未満:  エラー
 */
-int sip_invite_send_and_answer(sip_param* param)
+int  sip_invite_send_and_answer(sip_param* param)
 {
     int err;
 
@@ -441,15 +442,15 @@ int  sip_invite_send(sip_param* param)
 {
     int err;
     
-    eXosip_lock();
-    err = eXosip_call_build_initial_invite(&(param->invt), param->to, param->from, NULL, NULL);
+    eXosip_lock(param->context);
+    err = eXosip_call_build_initial_invite(param->context, &(param->invt), param->to, param->from, NULL, NULL);
     if (err<0) {
-        eXosip_unlock();
+        eXosip_unlock(param->context);
         return err;
     }
 
-    err = eXosip_call_send_initial_invite(param->invt);
-    eXosip_unlock ();
+    err = eXosip_call_send_initial_invite(param->context, param->invt);
+    eXosip_unlock(param->context);
 
     return err;
 }
@@ -474,8 +475,8 @@ int  sip_invite_answer(sip_param* param)
     eXosip_event_t *event;
 
     Loop {
-          event = eXosip_event_wait(0, 100);
-          if (event==NULL) continue;
+        event = eXosip_event_wait(param->context, 0, 100);
+        if (event==NULL) continue;
         etype = event->type;
         DEBUG_MODE print_message("sip_invite_answer: Event (type, did, cid) = (%d, %d, %d)\n", event->type, event->did, event->cid);
 
@@ -528,7 +529,7 @@ int  sip_invite_answer(sip_param* param)
             DEBUG_MESG("sip_invite_answer: Call Closed.  %d\n", etype);
             brk_flg = ON;
         }
-        else if (etype==EXOSIP_CALL_RELEASED) {            // call context is cleared. 
+        else if (etype==EXOSIP_CALL_RELEASED) {            // call param->context is cleared. 
             DEBUG_MESG("sip_invite_answer: Call Released.  %d\n", etype);
             brk_flg = ON;
         }
@@ -578,7 +579,7 @@ int  sip_invite_wait(sip_param* param)
         }
         param->inWait = ON;
 
-        event = eXosip_event_wait(0, 100);
+        event = eXosip_event_wait(param->context, 0, 100);
           if (event==NULL) {
             continue;
         }
@@ -595,7 +596,7 @@ int  sip_invite_wait(sip_param* param)
             param->inInvite = ON;
             break;
         }
-        //eXosip_event_free(event);
+        //eXosip_event_free(param->context, event);
     }
 
     param->inWait = OFF;
@@ -619,14 +620,14 @@ int  sip_invite_accept(sip_param* param)
     int i, err, pid;
 
     // 100 Trying 送信
-    eXosip_lock();
-    eXosip_call_send_answer(param->tid, 100, NULL);
-    eXosip_unlock();
+    eXosip_lock(param->context);
+    eXosip_call_send_answer(param->context, param->tid, 100, NULL);
+    eXosip_unlock(param->context);
 
     // 180 Ringing 送信
-    eXosip_lock();
-    eXosip_call_send_answer(param->tid, 180, NULL);
-    eXosip_unlock();
+    eXosip_lock(param->context);
+    eXosip_call_send_answer(param->context, param->tid, 180, NULL);
+    eXosip_unlock(param->context);
 
     // プロセスの起動
     pid = sip_process_fork(param);
@@ -638,15 +639,15 @@ int  sip_invite_accept(sip_param* param)
     param->cpid = pid;
 
     // 200 OK 送信
-    eXosip_lock();
-    err = eXosip_call_build_answer(param->tid, 200, &param->mssg);
+    eXosip_lock(param->context);
+    err = eXosip_call_build_answer(param->context, param->tid, 200, &param->mssg);
     if (err==0) {
         sdp_set_body2(param, param->mssg);
-        err = eXosip_call_send_answer(param->tid, 200, param->mssg);
+        err = eXosip_call_send_answer(param->context, param->tid, 200, param->mssg);
         //osip_message_free(param->mssg);
         //param->mssg = NULL;
     }
-    eXosip_unlock();
+    eXosip_unlock(param->context);
     param->inInvite = OFF;
 
     if (err!=0) {
@@ -695,7 +696,7 @@ int  sip_session_term_wait(sip_param* param)
 
         if (param->inChild==OFF) break;    // 子プロセスは終了している．
 
-        event = eXosip_event_wait(0, 100);
+        event = eXosip_event_wait(param->context, 0, 100);
         if (event==NULL) {
             continue;
         }
@@ -711,7 +712,6 @@ int  sip_session_term_wait(sip_param* param)
         if (etype==EXOSIP_CALL_CLOSED || etype==EXOSIP_CALL_CANCELLED || etype==EXOSIP_CALL_RELEASED) {
             break;
         }
-
     }
 
     param->inSession = OFF;
@@ -737,9 +737,9 @@ int  sip_session_terminate(sip_param* param)
     }
 
     // BYE を送信
-    eXosip_lock();
-    eXosip_call_terminate(param->cid, param->did);
-    eXosip_unlock();
+    eXosip_lock(param->context);
+    eXosip_call_terminate(param->context, param->cid, param->did);
+    eXosip_unlock(param->context);
     sleep(2);
 
     return 0;
@@ -787,15 +787,15 @@ int  sip_send_ack(sip_param* param)
 {
     int err;
 
-    eXosip_lock();
-    err = eXosip_call_build_ack(param->did, &param->mssg);
+    eXosip_lock(param->context);
+    err = eXosip_call_build_ack(param->context, param->did, &param->mssg);
     if (err!=0) {
         sip_session_terminate(param);
     }
     else {
-        err = eXosip_call_send_ack(param->did, param->mssg);
+        err = eXosip_call_send_ack(param->context, param->did, param->mssg);
     }
-    eXosip_unlock();
+    eXosip_unlock(param->context);
 
     return err;
 }
@@ -821,7 +821,7 @@ int  sip_event_get(sip_param* param)
         }
         param->inWait = ON;
 
-        event = eXosip_event_wait(0, 100);
+        event = eXosip_event_wait(param->context, 0, 100);
 
         if (event==NULL) {
             continue;
@@ -833,14 +833,13 @@ int  sip_event_get(sip_param* param)
         param->tid  = event->tid;
         param->cid  = event->cid;
         param->did  = event->did;
-        eXosip_event_free(event);
+        eXosip_event_free( event);
 
         if (etype==EXOSIP_CALL_INVITE) {
             param->inInvite = ON;
             err = sip_invite_accept(param);
             param->inInvite = OFF;
         }
-
     }
 
     return etype;

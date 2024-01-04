@@ -4,7 +4,7 @@
 SUBJ = udp_s udp_c sip_app
 
 #
-all: $(SUBJ) all-doc
+all: $(SUBJ) 
 
 #
 CC   = gcc
@@ -30,7 +30,7 @@ LIB_EXT = $(LIB_EXT_DIR)/libextend.a
 CFLAGS  = -DHAVE_CONFIG_H -DENABLE_TRACE -I$(LCLINC) -I$(LIB_BSC_DIR) -I$(LIB_DIR) -I$(LIB_EXT_DIR) -I$(XINCD) -I$(SSLINC)  
 
 #SIPLIB = -lgc -losip2 -leXosip2
-SIPLIB = -losip2 -leXosip2 -lssl
+SIPLIB = -losipparser2 -losip2 -leXosip2 -lssl -lpthread
 XLIB = -L$(XLIBD) -lX11 
 SLIB = -L$(LIB_BSC_DIR) -lbasic -lm
 GLIB = -L$(LIB_GRA_DIR) -lgraph $(XLIB)
@@ -45,11 +45,6 @@ ELIB = -L$(LIB_EXT_DIR) -lextend
 
 clean:
 	-rm -f *.o *~ $(SUBJ)
-	-(cd Doc &&  make clean)
-
-all-doc:
-	-(cd Doc && make)
-
 
 tgz:
 	make clean
@@ -73,8 +68,6 @@ xxx: xxx.o  $(LIB_BSC)
 
 
 
-
-
 $(LIB_BSC):
 	(cd $(LIB_BSC_DIR) && make)
 
@@ -85,7 +78,5 @@ $(LIB_GRA):
 	
 $(LIB_EXT):
 	(cd $(LIB_EXT_DIR) && make)
-
-
 
 

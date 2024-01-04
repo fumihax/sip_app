@@ -1,0 +1,275 @@
+| INFO2 | <eXutils.c: 673> IPv4 address detected: 0.0.0.0
+| INFO2 | <eXutils.c: 738> DNS resolution with 0.0.0.0:5200
+| INFO2 | <eXconf.c: 658> eXosip: Reseting timer to 15s before waking up!
+| INFO2 | <osip_transaction.c: 131> allocating transaction ressource 1 1748477885
+| INFO2 | <nict.c: 34> allocating NICT context
+| INFO2 | <eXutils.c: 673> IPv4 address detected: 172.22.1.41
+| INFO2 | <eXutils.c: 738> DNS resolution with 172.22.1.41:5060
+| INFO1 | <jcallback.c: 236> Message sent: 
+REGISTER sip:172.22.1.41 SIP/2.0
+Via: SIP/2.0/UDP 202.26.159.135:5200;rport;branch=z9hG4bK211634061
+From: <sip:1000@172.22.1.41>;tag=2085258124
+To: <sip:1000@172.22.1.41>
+Call-ID: 1748477885@202.26.159.135
+CSeq: 1 REGISTER
+Contact: <sip:1000@202.26.159.135:5200>
+Max-Forwards: 70
+User-Agent: SIP for APP b1 rev.27
+Expires: 3600
+Content-Length: 0
+
+ (to dest=(unknown):5060)
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:0 usec:100000!
+| INFO1 | <udp.c: 1742> Received message: 
+SIP/2.0 200 OK
+Via: SIP/2.0/UDP 202.26.159.135:5200;rport;branch=z9hG4bK211634061
+From: <sip:1000@172.22.1.41>;tag=2085258124
+To: <sip:1000@172.22.1.41>
+Call-ID: 1748477885@202.26.159.135
+CSeq: 1 REGISTER
+Contact: <sip:1000@202.26.159.135:5200>
+Expires: 3600
+Content-Length: 0
+
+
+| INFO1 | <udp.c: 1786> Message received from: 172.22.1.41:5060 (serv=)
+| INFO1 | <udp.c: 1792> Message received from: 172.22.1.41:5060 (serv=)
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:5 usec:10000!
+| INFO2 | <osip_transaction.c: 131> allocating transaction ressource 2 1138121303
+| INFO2 | <ict.c: 34> allocating ICT context
+| INFO2 | <eXutils.c: 673> IPv4 address detected: 172.22.1.41
+| INFO2 | <eXutils.c: 738> DNS resolution with 172.22.1.41:5060
+| INFO1 | <jcallback.c: 236> Message sent: 
+INVITE sip:1001@172.22.1.41 SIP/2.0
+Via: SIP/2.0/UDP 202.26.159.135:5200;rport;branch=z9hG4bK1338278711
+From: <sip:1000@172.22.1.41>;tag=1693208865
+To: <sip:1001@172.22.1.41>
+Call-ID: 1138121303@202.26.159.135
+CSeq: 20 INVITE
+Contact: <sip:1000@202.26.159.135:5200>
+Max-Forwards: 70
+User-Agent: SIP for APP b1 rev.27
+Expires: 120
+Allow: INVITE, ACK, UPDATE, INFO, CANCEL, BYE, OPTIONS, REFER, SUBSCRIBE, NOTIFY, MESSAGE
+Content-Length: 0
+
+ (to dest=(unknown):5060)
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:0 usec:100000!
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:0 usec:100000!
+| INFO1 | <udp.c: 1742> Received message: 
+SIP/2.0 100 Trying
+Via: SIP/2.0/UDP 202.26.159.135:5200;rport;branch=z9hG4bK1338278711
+Record-Route: <sip:siproxd@172.22.1.41:5060;lr>
+From: <sip:1000@172.22.1.41>;tag=1693208865
+To: <sip:1001@172.22.1.41>
+Call-ID: 1138121303@202.26.159.135
+CSeq: 20 INVITE
+User-agent: SIP for APP b1 rev.27
+Allow: INVITE, ACK, OPTIONS, CANCEL, BYE, SUBSCRIBE, NOTIFY, MESSAGE, INFO, REFER, UPDATE
+Content-Length: 0
+
+
+| INFO1 | <udp.c: 1786> Message received from: 172.22.1.41:5060 (serv=)
+| INFO1 | <udp.c: 1792> Message received from: 172.22.1.41:5060 (serv=)
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:4 usec:100000!
+| INFO1 | <udp.c: 1742> Received message: 
+SIP/2.0 101 Dialog Establishement
+Via: SIP/2.0/UDP 202.26.159.135:5200;rport;branch=z9hG4bK1338278711
+Record-Route: <sip:siproxd@172.22.1.41:5060;lr>
+From: <sip:1000@172.22.1.41>;tag=1693208865
+To: <sip:1001@172.22.1.41>;tag=1153213585
+Call-ID: 1138121303@202.26.159.135
+CSeq: 20 INVITE
+Contact: <sip:1001@172.22.1.41>
+User-agent: SIP for APP b1 rev.27
+Allow: INVITE, ACK, OPTIONS, CANCEL, BYE, SUBSCRIBE, NOTIFY, MESSAGE, INFO, REFER, UPDATE
+Content-Length: 0
+
+
+| INFO1 | <udp.c: 1786> Message received from: 172.22.1.41:5060 (serv=)
+| INFO1 | <udp.c: 1792> Message received from: 172.22.1.41:5060 (serv=)
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:4 usec:100000!
+| INFO1 | <udp.c: 1742> Received message: 
+SIP/2.0 100 Trying
+Via: SIP/2.0/UDP 202.26.159.135:5200;rport;branch=z9hG4bK1338278711
+Record-Route: <sip:siproxd@172.22.1.41:5060;lr>
+From: <sip:1000@172.22.1.41>;tag=1693208865
+To: <sip:1001@172.22.1.41>;tag=1153213585
+Call-ID: 1138121303@202.26.159.135
+CSeq: 20 INVITE
+User-agent: SIP for APP b1 rev.27
+Allow: INVITE, ACK, OPTIONS, CANCEL, BYE, SUBSCRIBE, NOTIFY, MESSAGE, INFO, REFER, UPDATE
+Content-Length: 0
+
+
+| INFO1 | <udp.c: 1786> Message received from: 172.22.1.41:5060 (serv=)
+| INFO1 | <udp.c: 1792> Message received from: 172.22.1.41:5060 (serv=)
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:4 usec:100000!
+| INFO1 | <udp.c: 1742> Received message: 
+SIP/2.0 180 Ringing
+Via: SIP/2.0/UDP 202.26.159.135:5200;rport;branch=z9hG4bK1338278711
+Record-Route: <sip:siproxd@172.22.1.41:5060;lr>
+From: <sip:1000@172.22.1.41>;tag=1693208865
+To: <sip:1001@172.22.1.41>;tag=1153213585
+Call-ID: 1138121303@202.26.159.135
+CSeq: 20 INVITE
+Contact: <sip:1001@172.22.1.41>
+User-agent: SIP for APP b1 rev.27
+Allow: INVITE, ACK, OPTIONS, CANCEL, BYE, SUBSCRIBE, NOTIFY, MESSAGE, INFO, REFER, UPDATE
+Content-Length: 0
+
+
+| INFO1 | <udp.c: 1786> Message received from: 172.22.1.41:5060 (serv=)
+| INFO1 | <udp.c: 1792> Message received from: 172.22.1.41:5060 (serv=)
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:4 usec:100000!
+| INFO1 | <udp.c: 1742> Received message: 
+SIP/2.0 200 OK
+Via: SIP/2.0/UDP 202.26.159.135:5200;rport;branch=z9hG4bK1338278711
+Record-Route: <sip:siproxd@172.22.1.41:5060;lr>
+From: <sip:1000@172.22.1.41>;tag=1693208865
+To: <sip:1001@172.22.1.41>;tag=1153213585
+Call-ID: 1138121303@202.26.159.135
+CSeq: 20 INVITE
+Contact: <sip:1001@172.22.1.41>
+User-agent: SIP for APP b1 rev.27
+Allow: INVITE, ACK, OPTIONS, CANCEL, BYE, SUBSCRIBE, NOTIFY, MESSAGE, INFO, REFER, UPDATE
+Content-Type: application/sdp
+Content-Length:   237
+
+v=0
+o=1001 1161942036 1161942036 IN IP4 172.22.1.41
+s=-
+t=0 0
+m=application/vpn 7088 OpenVPN 0
+c=IN IP4 172.22.1.41
+k=DH:crypt code
+a=IP4:202.26.158.2
+a=PORT:8139
+a=VPN_LOCAL_ADDR:192.168.250.1
+a=VPN_REMOTE_ADDR:192.168.250.2
+
+| INFO1 | <udp.c: 1786> Message received from: 172.22.1.41:5060 (serv=)
+| INFO1 | <udp.c: 1792> Message received from: 172.22.1.41:5060 (serv=)
+| INFO1 | <jcallback.c: 394> cb_ict_kill_transaction (id=2)
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:4 usec:100000!
+| INFO2 | <eXutils.c: 673> IPv4 address detected: 172.22.1.41
+| INFO2 | <eXutils.c: 738> DNS resolution with 172.22.1.41:5060
+| INFO1 | <jcallback.c: 236> Message sent: 
+ACK sip:1001@172.22.1.41 SIP/2.0
+Via: SIP/2.0/UDP 202.26.159.135:5200;rport;branch=z9hG4bK1840682644
+Route: <sip:siproxd@172.22.1.41:5060;lr>
+From: <sip:1000@172.22.1.41>;tag=1693208865
+To: <sip:1001@172.22.1.41>;tag=1153213585
+Call-ID: 1138121303@202.26.159.135
+CSeq: 20 ACK
+Contact: <sip:1000@202.26.159.135:5200>
+Max-Forwards: 70
+User-Agent: SIP for APP b1 rev.27
+Content-Length: 0
+
+ (to dest=(unknown):5060)
+| INFO2 | <osip_transaction.c: 131> allocating transaction ressource 3 1138121303
+| INFO2 | <nict.c: 34> allocating NICT context
+| INFO2 | <eXutils.c: 673> IPv4 address detected: 172.22.1.41
+| INFO2 | <eXutils.c: 738> DNS resolution with 172.22.1.41:5060
+| INFO1 | <jcallback.c: 236> Message sent: 
+BYE sip:1001@172.22.1.41 SIP/2.0
+Via: SIP/2.0/UDP 202.26.159.135:5200;rport;branch=z9hG4bK600169927
+Route: <sip:siproxd@172.22.1.41:5060;lr>
+From: <sip:1000@172.22.1.41>;tag=1693208865
+To: <sip:1001@172.22.1.41>;tag=1153213585
+Call-ID: 1138121303@202.26.159.135
+CSeq: 21 BYE
+Contact: <sip:1000@202.26.159.135:5200>
+Max-Forwards: 70
+User-Agent: SIP for APP b1 rev.27
+Content-Length: 0
+
+ (to dest=(unknown):5060)
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:0 usec:100000!
+| INFO1 | <udp.c: 1742> Received message: 
+BYE sip:1000@202.26.159.135:5200 SIP/2.0
+Via: SIP/2.0/UDP 172.22.1.41:5060;branch=z9hG4bK14d735fed62e1120406e923cbddf0cb9
+Via: SIP/2.0/UDP 172.22.1.41:5060;branch=z9hG4bKdabcd501d1c99b58d31575b8fa73214c
+Via: SIP/2.0/UDP 202.26.158.2:5060;rport;branch=z9hG4bK1170243847
+Record-Route: <sip:siproxd@172.22.1.41:5060;lr>
+From: <sip:1001@172.22.1.41>;tag=1153213585
+To: <sip:1000@172.22.1.41>;tag=1693208865
+Call-ID: 1138121303@202.26.159.135
+CSeq: 21 BYE
+Contact: <sip:1001@172.22.1.41>
+Max-forwards: 68
+User-agent: SIP for APP b1 rev.27
+Content-Length: 0
+
+
+| INFO1 | <udp.c: 1786> Message received from: 172.22.1.41:5060 (serv=)
+| INFO1 | <udp.c: 1792> Message received from: 172.22.1.41:5060 (serv=)
+| INFO1 | <udp.c: 1804> This is a request
+| INFO2 | <osip_transaction.c: 131> allocating transaction ressource 4 1138121303
+| INFO2 | <nist.c: 32> allocating NIST context
+| INFO2 | <eXutils.c: 673> IPv4 address detected: 172.22.1.41
+| INFO2 | <eXutils.c: 738> DNS resolution with 172.22.1.41:5060
+| INFO1 | <jcallback.c: 236> Message sent: 
+SIP/2.0 481 Call Leg/Transaction Does Not Exist
+Via: SIP/2.0/UDP 172.22.1.41:5060;branch=z9hG4bK14d735fed62e1120406e923cbddf0cb9
+Via: SIP/2.0/UDP 172.22.1.41:5060;branch=z9hG4bKdabcd501d1c99b58d31575b8fa73214c
+Via: SIP/2.0/UDP 202.26.158.2:5060;rport;branch=z9hG4bK1170243847
+From: <sip:1001@172.22.1.41>;tag=1153213585
+To: <sip:1000@172.22.1.41>;tag=1693208865
+Call-ID: 1138121303@202.26.159.135
+CSeq: 21 BYE
+User-Agent: SIP for APP b1 rev.27
+Allow: INVITE, ACK, OPTIONS, CANCEL, BYE, SUBSCRIBE, NOTIFY, MESSAGE, INFO, REFER, UPDATE
+Content-Length: 0
+
+ (to dest=(unknown):5060)
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:0 usec:100000!
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:0 usec:100000!
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:0 usec:100000!
+| INFO1 | <udp.c: 1742> Received message: 
+SIP/2.0 481 Call Leg/Transaction Does Not Exist
+Via: SIP/2.0/UDP 202.26.159.135:5200;rport;branch=z9hG4bK600169927
+Record-Route: <sip:siproxd@172.22.1.41:5060;lr>
+From: <sip:1000@172.22.1.41>;tag=1693208865
+To: <sip:1001@172.22.1.41>;tag=1153213585
+Call-ID: 1138121303@202.26.159.135
+CSeq: 21 BYE
+User-agent: SIP for APP b1 rev.27
+Allow: INVITE, ACK, OPTIONS, CANCEL, BYE, SUBSCRIBE, NOTIFY, MESSAGE, INFO, REFER, UPDATE
+Content-Length: 0
+
+
+| INFO1 | <udp.c: 1786> Message received from: 172.22.1.41:5060 (serv=)
+| INFO1 | <udp.c: 1792> Message received from: 172.22.1.41:5060 (serv=)
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:4 usec:100000!
+| INFO2 | <osip_transaction.c: 131> allocating transaction ressource 5 1748477885
+| INFO2 | <nict.c: 34> allocating NICT context
+| INFO2 | <eXutils.c: 673> IPv4 address detected: 172.22.1.41
+| INFO2 | <eXutils.c: 738> DNS resolution with 172.22.1.41:5060
+| INFO1 | <jcallback.c: 236> Message sent: 
+REGISTER sip:172.22.1.41 SIP/2.0
+Via: SIP/2.0/UDP 202.26.159.135:5200;rport;branch=z9hG4bK172793385
+From: <sip:1000@172.22.1.41>;tag=2085258124
+To: <sip:1000@172.22.1.41>
+Call-ID: 1748477885@202.26.159.135
+CSeq: 2 REGISTER
+Contact: <sip:1000@202.26.159.135:5200>
+Max-Forwards: 70
+User-Agent: SIP for APP b1 rev.27
+Expires: 0
+Content-Length: 0
+
+ (to dest=(unknown):5060)
+| INFO1 | <jreg.c: 76> Release a non-terminated transaction
+| INFO2 | <osip_transaction.c: 285> free transaction ressource 5 1748477885
+| INFO2 | <nict.c: 123> free nict ressource
+| INFO1 | <eXconf.c: 261> Release a terminated transaction
+| INFO2 | <osip_transaction.c: 285> free transaction ressource 2 1138121303
+| INFO2 | <ict.c: 127> free ict ressource
+| INFO2 | <osip_transaction.c: 285> free transaction ressource 3 1138121303
+| INFO2 | <nict.c: 123> free nict ressource
+| INFO2 | <osip_transaction.c: 285> free transaction ressource 1 1748477885
+| INFO2 | <nict.c: 123> free nict ressource
+| INFO2 | <osip_transaction.c: 285> free transaction ressource 4 1138121303
+| INFO2 | <nist.c: 76> free nist ressource

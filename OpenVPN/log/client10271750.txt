@@ -1,0 +1,4 @@
+| INFO2 | <eXutils.c: 673> IPv4 address detected: 0.0.0.0
+| INFO2 | <eXutils.c: 738> DNS resolution with 0.0.0.0:5060
+| ERROR | <eXconf.c: 455> eXosip: Cannot bind socket node:0.0.0.0 family:2 Address already in use
+| ERROR | <eXconf.c: 494> eXosip: Cannot bind on port: 5060

@@ -1,0 +1,29 @@
+
+-------------------------------------------
+v_version  -> 0
+o_username -> 2500
+o_sess_id  -> 1160976591
+o_sess_ver -> 1160976591
+o_nettype  -> IN
+o_addrtype -> IP4
+o_addr     -> 202.26.159.130
+s_name     -> -
+i_info     -> (null)
+u_uri      -> (null)
+z_adjust   -> (null)
+
+Media 0
+m_media    -> application/vpn
+m_port     -> 7076
+m_num_port -> (null)
+m_protocol -> OpenVPN
+m_keytype  -> DH
+m_keydata  -> crypt code
+m_nettype  -> IN
+m_addrtype -> IP4
+m_addr     -> 202.26.159.130
+m_att_field -> IP4
+m_att_value -> 172.22.1.27
+m_att_field -> PORT
+m_att_value -> 8139
+-------------------------------------------

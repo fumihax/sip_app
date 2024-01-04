@@ -1,0 +1,23 @@
+PROXY   sip:202.26.159.130
+FROM    sip:2500@202.26.159.130
+CONTACT sip:2500@202.26.159.131:5060
+TO      sip:
+PROGRAM ./openvpn_server.sh
+VPN_LOCAL 192.168.250.1
+VPN_REMOTE 192.168.250.2
+VPN_PORT 8139
+sip_regist_answer: Event (type, did, cid) = (1, 0, 0)
+send_regist: Registration Success.
+
+recive_invite: new invite event wait start
+sip_invite_wait_event: Event (type, did, cid) = (5, 2, 1)
+session_start: セッションがスタートしました
+
+sip_process_fork: 致命的：子プロセスを起動できない．./openvpn_server.sh 8|璋傚顏 (null)
+sip_process_fork: param->argv：./openvpn_server.sh 8139 192.168.250.1 192.168.250.2 (null)
+
+session_terminate: セッションが終了しました
+
+recive_invite: new invite event wait start
+sip_invite_wait_event: Event (type, did, cid) = (26, 0, 1)
+sip_regist_thread_loop: Re-Registration Send error. -1

@@ -1,0 +1,732 @@
+| INFO2 | <eXutils.c: 673> IPv4 address detected: 0.0.0.0
+| INFO2 | <eXutils.c: 738> DNS resolution with 0.0.0.0:5060
+| INFO2 | <osip_transaction.c: 131> allocating transaction ressource 1 266996998
+| INFO2 | <nict.c: 34> allocating NICT context
+| INFO2 | <eXconf.c: 658> eXosip: Reseting timer to 15s before waking up!
+| INFO2 | <eXutils.c: 673> IPv4 address detected: 202.26.159.130
+| INFO2 | <eXutils.c: 738> DNS resolution with 202.26.159.130:5060
+| INFO1 | <jcallback.c: 236> Message sent: 
+REGISTER sip:202.26.159.130 SIP/2.0
+Via: SIP/2.0/UDP 172.28.20.2:5060;rport;branch=z9hG4bK1465151704
+From: <sip:2501@202.26.159.130>;tag=1425632780
+To: <sip:2501@202.26.159.130>
+Call-ID: 266996998@172.28.20.2
+CSeq: 1 REGISTER
+Contact: <sip:2501@172.28.20.2:5060>
+Max-Forwards: 70
+User-Agent: SIP for APP ¦Â1
+Expires: 3600
+Content-Length: 0
+
+ (to dest=(unknown):5060)
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:0 usec:100000!
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:0 usec:100000!
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:0 usec:100000!
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:0 usec:100000!
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:0 usec:100000!
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:0 usec:100000!
+| INFO2 | <eXutils.c: 673> IPv4 address detected: 202.26.159.130
+| INFO2 | <eXutils.c: 738> DNS resolution with 202.26.159.130:5060
+| INFO1 | <jcallback.c: 236> Message sent: 
+REGISTER sip:202.26.159.130 SIP/2.0
+Via: SIP/2.0/UDP 172.28.20.2:5060;rport;branch=z9hG4bK1465151704
+From: <sip:2501@202.26.159.130>;tag=1425632780
+To: <sip:2501@202.26.159.130>
+Call-ID: 266996998@172.28.20.2
+CSeq: 1 REGISTER
+Contact: <sip:2501@172.28.20.2:5060>
+Max-Forwards: 70
+User-Agent: SIP for APP ¦Â1
+Expires: 3600
+Content-Length: 0
+
+ (to dest=(unknown):5060)
+| INFO1 | <jcallback.c: 1865> cb_sndreq_retransmission (id=1)
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:1 usec:10000!
+| INFO2 | <eXutils.c: 673> IPv4 address detected: 202.26.159.130
+| INFO2 | <eXutils.c: 738> DNS resolution with 202.26.159.130:5060
+| INFO1 | <jcallback.c: 236> Message sent: 
+REGISTER sip:202.26.159.130 SIP/2.0
+Via: SIP/2.0/UDP 172.28.20.2:5060;rport;branch=z9hG4bK1465151704
+From: <sip:2501@202.26.159.130>;tag=1425632780
+To: <sip:2501@202.26.159.130>
+Call-ID: 266996998@172.28.20.2
+CSeq: 1 REGISTER
+Contact: <sip:2501@172.28.20.2:5060>
+Max-Forwards: 70
+User-Agent: SIP for APP ¦Â1
+Expires: 3600
+Content-Length: 0
+
+ (to dest=(unknown):5060)
+| INFO1 | <jcallback.c: 1865> cb_sndreq_retransmission (id=1)
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:2 usec:10000!
+| INFO2 | <eXutils.c: 673> IPv4 address detected: 202.26.159.130
+| INFO2 | <eXutils.c: 738> DNS resolution with 202.26.159.130:5060
+| INFO1 | <jcallback.c: 236> Message sent: 
+REGISTER sip:202.26.159.130 SIP/2.0
+Via: SIP/2.0/UDP 172.28.20.2:5060;rport;branch=z9hG4bK1465151704
+From: <sip:2501@202.26.159.130>;tag=1425632780
+To: <sip:2501@202.26.159.130>
+Call-ID: 266996998@172.28.20.2
+CSeq: 1 REGISTER
+Contact: <sip:2501@172.28.20.2:5060>
+Max-Forwards: 70
+User-Agent: SIP for APP ¦Â1
+Expires: 3600
+Content-Length: 0
+
+ (to dest=(unknown):5060)
+| INFO1 | <jcallback.c: 1865> cb_sndreq_retransmission (id=1)
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:4 usec:10000!
+| INFO2 | <eXutils.c: 673> IPv4 address detected: 202.26.159.130
+| INFO2 | <eXutils.c: 738> DNS resolution with 202.26.159.130:5060
+| INFO1 | <jcallback.c: 236> Message sent: 
+REGISTER sip:202.26.159.130 SIP/2.0
+Via: SIP/2.0/UDP 172.28.20.2:5060;rport;branch=z9hG4bK1465151704
+From: <sip:2501@202.26.159.130>;tag=1425632780
+To: <sip:2501@202.26.159.130>
+Call-ID: 266996998@172.28.20.2
+CSeq: 1 REGISTER
+Contact: <sip:2501@172.28.20.2:5060>
+Max-Forwards: 70
+User-Agent: SIP for APP ¦Â1
+Expires: 3600
+Content-Length: 0
+
+ (to dest=(unknown):5060)
+| INFO1 | <jcallback.c: 1865> cb_sndreq_retransmission (id=1)
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:4 usec:10000!
+| INFO2 | <eXutils.c: 673> IPv4 address detected: 202.26.159.130
+| INFO2 | <eXutils.c: 738> DNS resolution with 202.26.159.130:5060
+| INFO1 | <jcallback.c: 236> Message sent: 
+REGISTER sip:202.26.159.130 SIP/2.0
+Via: SIP/2.0/UDP 172.28.20.2:5060;rport;branch=z9hG4bK1465151704
+From: <sip:2501@202.26.159.130>;tag=1425632780
+To: <sip:2501@202.26.159.130>
+Call-ID: 266996998@172.28.20.2
+CSeq: 1 REGISTER
+Contact: <sip:2501@172.28.20.2:5060>
+Max-Forwards: 70
+User-Agent: SIP for APP ¦Â1
+Expires: 3600
+Content-Length: 0
+
+ (to dest=(unknown):5060)
+| INFO1 | <jcallback.c: 1865> cb_sndreq_retransmission (id=1)
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:4 usec:10000!
+| INFO2 | <eXutils.c: 673> IPv4 address detected: 202.26.159.130
+| INFO2 | <eXutils.c: 738> DNS resolution with 202.26.159.130:5060
+| INFO1 | <jcallback.c: 236> Message sent: 
+REGISTER sip:202.26.159.130 SIP/2.0
+Via: SIP/2.0/UDP 172.28.20.2:5060;rport;branch=z9hG4bK1465151704
+From: <sip:2501@202.26.159.130>;tag=1425632780
+To: <sip:2501@202.26.159.130>
+Call-ID: 266996998@172.28.20.2
+CSeq: 1 REGISTER
+Contact: <sip:2501@172.28.20.2:5060>
+Max-Forwards: 70
+User-Agent: SIP for APP ¦Â1
+Expires: 3600
+Content-Length: 0
+
+ (to dest=(unknown):5060)
+| INFO1 | <jcallback.c: 1865> cb_sndreq_retransmission (id=1)
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:4 usec:10000!
+| INFO2 | <eXutils.c: 673> IPv4 address detected: 202.26.159.130
+| INFO2 | <eXutils.c: 738> DNS resolution with 202.26.159.130:5060
+| INFO1 | <jcallback.c: 236> Message sent: 
+REGISTER sip:202.26.159.130 SIP/2.0
+Via: SIP/2.0/UDP 172.28.20.2:5060;rport;branch=z9hG4bK1465151704
+From: <sip:2501@202.26.159.130>;tag=1425632780
+To: <sip:2501@202.26.159.130>
+Call-ID: 266996998@172.28.20.2
+CSeq: 1 REGISTER
+Contact: <sip:2501@172.28.20.2:5060>
+Max-Forwards: 70
+User-Agent: SIP for APP ¦Â1
+Expires: 3600
+Content-Length: 0
+
+ (to dest=(unknown):5060)
+| INFO1 | <jcallback.c: 1865> cb_sndreq_retransmission (id=1)
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:4 usec:10000!
+| INFO2 | <eXutils.c: 673> IPv4 address detected: 202.26.159.130
+| INFO2 | <eXutils.c: 738> DNS resolution with 202.26.159.130:5060
+| INFO1 | <jcallback.c: 236> Message sent: 
+REGISTER sip:202.26.159.130 SIP/2.0
+Via: SIP/2.0/UDP 172.28.20.2:5060;rport;branch=z9hG4bK1465151704
+From: <sip:2501@202.26.159.130>;tag=1425632780
+To: <sip:2501@202.26.159.130>
+Call-ID: 266996998@172.28.20.2
+CSeq: 1 REGISTER
+Contact: <sip:2501@172.28.20.2:5060>
+Max-Forwards: 70
+User-Agent: SIP for APP ¦Â1
+Expires: 3600
+Content-Length: 0
+
+ (to dest=(unknown):5060)
+| INFO1 | <jcallback.c: 1865> cb_sndreq_retransmission (id=1)
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:4 usec:10000!
+| INFO2 | <eXutils.c: 673> IPv4 address detected: 202.26.159.130
+| INFO2 | <eXutils.c: 738> DNS resolution with 202.26.159.130:5060
+| INFO1 | <jcallback.c: 236> Message sent: 
+REGISTER sip:202.26.159.130 SIP/2.0
+Via: SIP/2.0/UDP 172.28.20.2:5060;rport;branch=z9hG4bK1465151704
+From: <sip:2501@202.26.159.130>;tag=1425632780
+To: <sip:2501@202.26.159.130>
+Call-ID: 266996998@172.28.20.2
+CSeq: 1 REGISTER
+Contact: <sip:2501@172.28.20.2:5060>
+Max-Forwards: 70
+User-Agent: SIP for APP ¦Â1
+Expires: 3600
+Content-Length: 0
+
+ (to dest=(unknown):5060)
+| INFO1 | <jcallback.c: 1865> cb_sndreq_retransmission (id=1)
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:4 usec:10000!
+| INFO2 | <eXutils.c: 673> IPv4 address detected: 202.26.159.130
+| INFO2 | <eXutils.c: 738> DNS resolution with 202.26.159.130:5060
+| INFO1 | <jcallback.c: 236> Message sent: 
+REGISTER sip:202.26.159.130 SIP/2.0
+Via: SIP/2.0/UDP 172.28.20.2:5060;rport;branch=z9hG4bK1465151704
+From: <sip:2501@202.26.159.130>;tag=1425632780
+To: <sip:2501@202.26.159.130>
+Call-ID: 266996998@172.28.20.2
+CSeq: 1 REGISTER
+Contact: <sip:2501@172.28.20.2:5060>
+Max-Forwards: 70
+User-Agent: SIP for APP ¦Â1
+Expires: 3600
+Content-Length: 0
+
+ (to dest=(unknown):5060)
+| INFO1 | <jcallback.c: 1865> cb_sndreq_retransmission (id=1)
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:0 usec:100000!
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:0 usec:100000!
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:0 usec:100000!
+| INFO1 | <jcallback.c: 436> cb_nict_kill_transaction (id=1)
+| INFO2 | <eXconf.c: 658> eXosip: Reseting timer to 15s before waking up!
+| INFO2 | <osip_transaction.c: 131> allocating transaction ressource 2 266996998
+| INFO2 | <nict.c: 34> allocating NICT context
+| INFO2 | <eXutils.c: 673> IPv4 address detected: 202.26.159.130
+| INFO2 | <eXutils.c: 738> DNS resolution with 202.26.159.130:5060
+| INFO1 | <jcallback.c: 236> Message sent: 
+REGISTER sip:202.26.159.130 SIP/2.0
+Via: SIP/2.0/UDP 172.28.20.2:5060;rport;branch=z9hG4bK1318894407
+From: <sip:2501@202.26.159.130>;tag=1425632780
+To: <sip:2501@202.26.159.130>
+Call-ID: 266996998@172.28.20.2
+CSeq: 2 REGISTER
+Contact: <sip:2501@172.28.20.2:5060>
+Max-Forwards: 70
+User-Agent: SIP for APP ¦Â1
+Expires: 3600
+Content-Length: 0
+
+ (to dest=(unknown):5060)
+| INFO2 | <osip_transaction.c: 285> free transaction ressource 1 266996998
+| INFO2 | <nict.c: 123> free nict ressource
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:0 usec:100000!
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:0 usec:100000!
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:0 usec:100000!
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:0 usec:100000!
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:0 usec:100000!
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:0 usec:100000!
+| INFO2 | <eXutils.c: 673> IPv4 address detected: 202.26.159.130
+| INFO2 | <eXutils.c: 738> DNS resolution with 202.26.159.130:5060
+| INFO1 | <jcallback.c: 236> Message sent: 
+REGISTER sip:202.26.159.130 SIP/2.0
+Via: SIP/2.0/UDP 172.28.20.2:5060;rport;branch=z9hG4bK1318894407
+From: <sip:2501@202.26.159.130>;tag=1425632780
+To: <sip:2501@202.26.159.130>
+Call-ID: 266996998@172.28.20.2
+CSeq: 2 REGISTER
+Contact: <sip:2501@172.28.20.2:5060>
+Max-Forwards: 70
+User-Agent: SIP for APP ¦Â1
+Expires: 3600
+Content-Length: 0
+
+ (to dest=(unknown):5060)
+| INFO1 | <jcallback.c: 1865> cb_sndreq_retransmission (id=2)
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:1 usec:10000!
+| INFO2 | <eXutils.c: 673> IPv4 address detected: 202.26.159.130
+| INFO2 | <eXutils.c: 738> DNS resolution with 202.26.159.130:5060
+| INFO1 | <jcallback.c: 236> Message sent: 
+REGISTER sip:202.26.159.130 SIP/2.0
+Via: SIP/2.0/UDP 172.28.20.2:5060;rport;branch=z9hG4bK1318894407
+From: <sip:2501@202.26.159.130>;tag=1425632780
+To: <sip:2501@202.26.159.130>
+Call-ID: 266996998@172.28.20.2
+CSeq: 2 REGISTER
+Contact: <sip:2501@172.28.20.2:5060>
+Max-Forwards: 70
+User-Agent: SIP for APP ¦Â1
+Expires: 3600
+Content-Length: 0
+
+ (to dest=(unknown):5060)
+| INFO1 | <jcallback.c: 1865> cb_sndreq_retransmission (id=2)
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:2 usec:10000!
+| INFO2 | <eXutils.c: 673> IPv4 address detected: 202.26.159.130
+| INFO2 | <eXutils.c: 738> DNS resolution with 202.26.159.130:5060
+| INFO1 | <jcallback.c: 236> Message sent: 
+REGISTER sip:202.26.159.130 SIP/2.0
+Via: SIP/2.0/UDP 172.28.20.2:5060;rport;branch=z9hG4bK1318894407
+From: <sip:2501@202.26.159.130>;tag=1425632780
+To: <sip:2501@202.26.159.130>
+Call-ID: 266996998@172.28.20.2
+CSeq: 2 REGISTER
+Contact: <sip:2501@172.28.20.2:5060>
+Max-Forwards: 70
+User-Agent: SIP for APP ¦Â1
+Expires: 3600
+Content-Length: 0
+
+ (to dest=(unknown):5060)
+| INFO1 | <jcallback.c: 1865> cb_sndreq_retransmission (id=2)
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:4 usec:10000!
+| INFO2 | <eXutils.c: 673> IPv4 address detected: 202.26.159.130
+| INFO2 | <eXutils.c: 738> DNS resolution with 202.26.159.130:5060
+| INFO1 | <jcallback.c: 236> Message sent: 
+REGISTER sip:202.26.159.130 SIP/2.0
+Via: SIP/2.0/UDP 172.28.20.2:5060;rport;branch=z9hG4bK1318894407
+From: <sip:2501@202.26.159.130>;tag=1425632780
+To: <sip:2501@202.26.159.130>
+Call-ID: 266996998@172.28.20.2
+CSeq: 2 REGISTER
+Contact: <sip:2501@172.28.20.2:5060>
+Max-Forwards: 70
+User-Agent: SIP for APP ¦Â1
+Expires: 3600
+Content-Length: 0
+
+ (to dest=(unknown):5060)
+| INFO1 | <jcallback.c: 1865> cb_sndreq_retransmission (id=2)
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:4 usec:10000!
+| INFO2 | <eXutils.c: 673> IPv4 address detected: 202.26.159.130
+| INFO2 | <eXutils.c: 738> DNS resolution with 202.26.159.130:5060
+| INFO1 | <jcallback.c: 236> Message sent: 
+REGISTER sip:202.26.159.130 SIP/2.0
+Via: SIP/2.0/UDP 172.28.20.2:5060;rport;branch=z9hG4bK1318894407
+From: <sip:2501@202.26.159.130>;tag=1425632780
+To: <sip:2501@202.26.159.130>
+Call-ID: 266996998@172.28.20.2
+CSeq: 2 REGISTER
+Contact: <sip:2501@172.28.20.2:5060>
+Max-Forwards: 70
+User-Agent: SIP for APP ¦Â1
+Expires: 3600
+Content-Length: 0
+
+ (to dest=(unknown):5060)
+| INFO1 | <jcallback.c: 1865> cb_sndreq_retransmission (id=2)
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:4 usec:10000!
+| INFO2 | <eXutils.c: 673> IPv4 address detected: 202.26.159.130
+| INFO2 | <eXutils.c: 738> DNS resolution with 202.26.159.130:5060
+| INFO1 | <jcallback.c: 236> Message sent: 
+REGISTER sip:202.26.159.130 SIP/2.0
+Via: SIP/2.0/UDP 172.28.20.2:5060;rport;branch=z9hG4bK1318894407
+From: <sip:2501@202.26.159.130>;tag=1425632780
+To: <sip:2501@202.26.159.130>
+Call-ID: 266996998@172.28.20.2
+CSeq: 2 REGISTER
+Contact: <sip:2501@172.28.20.2:5060>
+Max-Forwards: 70
+User-Agent: SIP for APP ¦Â1
+Expires: 3600
+Content-Length: 0
+
+ (to dest=(unknown):5060)
+| INFO1 | <jcallback.c: 1865> cb_sndreq_retransmission (id=2)
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:4 usec:10000!
+| INFO2 | <eXutils.c: 673> IPv4 address detected: 202.26.159.130
+| INFO2 | <eXutils.c: 738> DNS resolution with 202.26.159.130:5060
+| INFO1 | <jcallback.c: 236> Message sent: 
+REGISTER sip:202.26.159.130 SIP/2.0
+Via: SIP/2.0/UDP 172.28.20.2:5060;rport;branch=z9hG4bK1318894407
+From: <sip:2501@202.26.159.130>;tag=1425632780
+To: <sip:2501@202.26.159.130>
+Call-ID: 266996998@172.28.20.2
+CSeq: 2 REGISTER
+Contact: <sip:2501@172.28.20.2:5060>
+Max-Forwards: 70
+User-Agent: SIP for APP ¦Â1
+Expires: 3600
+Content-Length: 0
+
+ (to dest=(unknown):5060)
+| INFO1 | <jcallback.c: 1865> cb_sndreq_retransmission (id=2)
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:4 usec:10000!
+| INFO2 | <eXutils.c: 673> IPv4 address detected: 202.26.159.130
+| INFO2 | <eXutils.c: 738> DNS resolution with 202.26.159.130:5060
+| INFO1 | <jcallback.c: 236> Message sent: 
+REGISTER sip:202.26.159.130 SIP/2.0
+Via: SIP/2.0/UDP 172.28.20.2:5060;rport;branch=z9hG4bK1318894407
+From: <sip:2501@202.26.159.130>;tag=1425632780
+To: <sip:2501@202.26.159.130>
+Call-ID: 266996998@172.28.20.2
+CSeq: 2 REGISTER
+Contact: <sip:2501@172.28.20.2:5060>
+Max-Forwards: 70
+User-Agent: SIP for APP ¦Â1
+Expires: 3600
+Content-Length: 0
+
+ (to dest=(unknown):5060)
+| INFO1 | <jcallback.c: 1865> cb_sndreq_retransmission (id=2)
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:4 usec:10000!
+| INFO2 | <eXutils.c: 673> IPv4 address detected: 202.26.159.130
+| INFO2 | <eXutils.c: 738> DNS resolution with 202.26.159.130:5060
+| INFO1 | <jcallback.c: 236> Message sent: 
+REGISTER sip:202.26.159.130 SIP/2.0
+Via: SIP/2.0/UDP 172.28.20.2:5060;rport;branch=z9hG4bK1318894407
+From: <sip:2501@202.26.159.130>;tag=1425632780
+To: <sip:2501@202.26.159.130>
+Call-ID: 266996998@172.28.20.2
+CSeq: 2 REGISTER
+Contact: <sip:2501@172.28.20.2:5060>
+Max-Forwards: 70
+User-Agent: SIP for APP ¦Â1
+Expires: 3600
+Content-Length: 0
+
+ (to dest=(unknown):5060)
+| INFO1 | <jcallback.c: 1865> cb_sndreq_retransmission (id=2)
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:4 usec:10000!
+| INFO2 | <eXutils.c: 673> IPv4 address detected: 202.26.159.130
+| INFO2 | <eXutils.c: 738> DNS resolution with 202.26.159.130:5060
+| INFO1 | <jcallback.c: 236> Message sent: 
+REGISTER sip:202.26.159.130 SIP/2.0
+Via: SIP/2.0/UDP 172.28.20.2:5060;rport;branch=z9hG4bK1318894407
+From: <sip:2501@202.26.159.130>;tag=1425632780
+To: <sip:2501@202.26.159.130>
+Call-ID: 266996998@172.28.20.2
+CSeq: 2 REGISTER
+Contact: <sip:2501@172.28.20.2:5060>
+Max-Forwards: 70
+User-Agent: SIP for APP ¦Â1
+Expires: 3600
+Content-Length: 0
+
+ (to dest=(unknown):5060)
+| INFO1 | <jcallback.c: 1865> cb_sndreq_retransmission (id=2)
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:0 usec:100000!
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:0 usec:100000!
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:0 usec:100000!
+| INFO1 | <jcallback.c: 436> cb_nict_kill_transaction (id=2)
+| INFO2 | <eXconf.c: 658> eXosip: Reseting timer to 15s before waking up!
+| INFO2 | <osip_transaction.c: 131> allocating transaction ressource 3 266996998
+| INFO2 | <nict.c: 34> allocating NICT context
+| INFO2 | <eXutils.c: 673> IPv4 address detected: 202.26.159.130
+| INFO2 | <eXutils.c: 738> DNS resolution with 202.26.159.130:5060
+| INFO1 | <jcallback.c: 236> Message sent: 
+REGISTER sip:202.26.159.130 SIP/2.0
+Via: SIP/2.0/UDP 172.28.20.2:5060;rport;branch=z9hG4bK585317710
+From: <sip:2501@202.26.159.130>;tag=1425632780
+To: <sip:2501@202.26.159.130>
+Call-ID: 266996998@172.28.20.2
+CSeq: 3 REGISTER
+Contact: <sip:2501@172.28.20.2:5060>
+Max-Forwards: 70
+User-Agent: SIP for APP ¦Â1
+Expires: 3600
+Content-Length: 0
+
+ (to dest=(unknown):5060)
+| INFO2 | <osip_transaction.c: 285> free transaction ressource 2 266996998
+| INFO2 | <nict.c: 123> free nict ressource
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:0 usec:100000!
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:0 usec:100000!
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:0 usec:100000!
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:0 usec:100000!
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:0 usec:100000!
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:0 usec:100000!
+| INFO2 | <eXutils.c: 673> IPv4 address detected: 202.26.159.130
+| INFO2 | <eXutils.c: 738> DNS resolution with 202.26.159.130:5060
+| INFO1 | <jcallback.c: 236> Message sent: 
+REGISTER sip:202.26.159.130 SIP/2.0
+Via: SIP/2.0/UDP 172.28.20.2:5060;rport;branch=z9hG4bK585317710
+From: <sip:2501@202.26.159.130>;tag=1425632780
+To: <sip:2501@202.26.159.130>
+Call-ID: 266996998@172.28.20.2
+CSeq: 3 REGISTER
+Contact: <sip:2501@172.28.20.2:5060>
+Max-Forwards: 70
+User-Agent: SIP for APP ¦Â1
+Expires: 3600
+Content-Length: 0
+
+ (to dest=(unknown):5060)
+| INFO1 | <jcallback.c: 1865> cb_sndreq_retransmission (id=3)
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:1 usec:10000!
+| INFO2 | <eXutils.c: 673> IPv4 address detected: 202.26.159.130
+| INFO2 | <eXutils.c: 738> DNS resolution with 202.26.159.130:5060
+| INFO1 | <jcallback.c: 236> Message sent: 
+REGISTER sip:202.26.159.130 SIP/2.0
+Via: SIP/2.0/UDP 172.28.20.2:5060;rport;branch=z9hG4bK585317710
+From: <sip:2501@202.26.159.130>;tag=1425632780
+To: <sip:2501@202.26.159.130>
+Call-ID: 266996998@172.28.20.2
+CSeq: 3 REGISTER
+Contact: <sip:2501@172.28.20.2:5060>
+Max-Forwards: 70
+User-Agent: SIP for APP ¦Â1
+Expires: 3600
+Content-Length: 0
+
+ (to dest=(unknown):5060)
+| INFO1 | <jcallback.c: 1865> cb_sndreq_retransmission (id=3)
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:2 usec:10000!
+| INFO2 | <eXutils.c: 673> IPv4 address detected: 202.26.159.130
+| INFO2 | <eXutils.c: 738> DNS resolution with 202.26.159.130:5060
+| INFO1 | <jcallback.c: 236> Message sent: 
+REGISTER sip:202.26.159.130 SIP/2.0
+Via: SIP/2.0/UDP 172.28.20.2:5060;rport;branch=z9hG4bK585317710
+From: <sip:2501@202.26.159.130>;tag=1425632780
+To: <sip:2501@202.26.159.130>
+Call-ID: 266996998@172.28.20.2
+CSeq: 3 REGISTER
+Contact: <sip:2501@172.28.20.2:5060>
+Max-Forwards: 70
+User-Agent: SIP for APP ¦Â1
+Expires: 3600
+Content-Length: 0
+
+ (to dest=(unknown):5060)
+| INFO1 | <jcallback.c: 1865> cb_sndreq_retransmission (id=3)
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:4 usec:10000!
+| INFO2 | <eXutils.c: 673> IPv4 address detected: 202.26.159.130
+| INFO2 | <eXutils.c: 738> DNS resolution with 202.26.159.130:5060
+| INFO1 | <jcallback.c: 236> Message sent: 
+REGISTER sip:202.26.159.130 SIP/2.0
+Via: SIP/2.0/UDP 172.28.20.2:5060;rport;branch=z9hG4bK585317710
+From: <sip:2501@202.26.159.130>;tag=1425632780
+To: <sip:2501@202.26.159.130>
+Call-ID: 266996998@172.28.20.2
+CSeq: 3 REGISTER
+Contact: <sip:2501@172.28.20.2:5060>
+Max-Forwards: 70
+User-Agent: SIP for APP ¦Â1
+Expires: 3600
+Content-Length: 0
+
+ (to dest=(unknown):5060)
+| INFO1 | <jcallback.c: 1865> cb_sndreq_retransmission (id=3)
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:4 usec:10000!
+| INFO2 | <eXutils.c: 673> IPv4 address detected: 202.26.159.130
+| INFO2 | <eXutils.c: 738> DNS resolution with 202.26.159.130:5060
+| INFO1 | <jcallback.c: 236> Message sent: 
+REGISTER sip:202.26.159.130 SIP/2.0
+Via: SIP/2.0/UDP 172.28.20.2:5060;rport;branch=z9hG4bK585317710
+From: <sip:2501@202.26.159.130>;tag=1425632780
+To: <sip:2501@202.26.159.130>
+Call-ID: 266996998@172.28.20.2
+CSeq: 3 REGISTER
+Contact: <sip:2501@172.28.20.2:5060>
+Max-Forwards: 70
+User-Agent: SIP for APP ¦Â1
+Expires: 3600
+Content-Length: 0
+
+ (to dest=(unknown):5060)
+| INFO1 | <jcallback.c: 1865> cb_sndreq_retransmission (id=3)
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:4 usec:10000!
+| INFO2 | <eXutils.c: 673> IPv4 address detected: 202.26.159.130
+| INFO2 | <eXutils.c: 738> DNS resolution with 202.26.159.130:5060
+| INFO1 | <jcallback.c: 236> Message sent: 
+REGISTER sip:202.26.159.130 SIP/2.0
+Via: SIP/2.0/UDP 172.28.20.2:5060;rport;branch=z9hG4bK585317710
+From: <sip:2501@202.26.159.130>;tag=1425632780
+To: <sip:2501@202.26.159.130>
+Call-ID: 266996998@172.28.20.2
+CSeq: 3 REGISTER
+Contact: <sip:2501@172.28.20.2:5060>
+Max-Forwards: 70
+User-Agent: SIP for APP ¦Â1
+Expires: 3600
+Content-Length: 0
+
+ (to dest=(unknown):5060)
+| INFO1 | <jcallback.c: 1865> cb_sndreq_retransmission (id=3)
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:4 usec:10000!
+| INFO2 | <eXutils.c: 673> IPv4 address detected: 202.26.159.130
+| INFO2 | <eXutils.c: 738> DNS resolution with 202.26.159.130:5060
+| INFO1 | <jcallback.c: 236> Message sent: 
+REGISTER sip:202.26.159.130 SIP/2.0
+Via: SIP/2.0/UDP 172.28.20.2:5060;rport;branch=z9hG4bK585317710
+From: <sip:2501@202.26.159.130>;tag=1425632780
+To: <sip:2501@202.26.159.130>
+Call-ID: 266996998@172.28.20.2
+CSeq: 3 REGISTER
+Contact: <sip:2501@172.28.20.2:5060>
+Max-Forwards: 70
+User-Agent: SIP for APP ¦Â1
+Expires: 3600
+Content-Length: 0
+
+ (to dest=(unknown):5060)
+| INFO1 | <jcallback.c: 1865> cb_sndreq_retransmission (id=3)
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:4 usec:10000!
+| INFO2 | <eXutils.c: 673> IPv4 address detected: 202.26.159.130
+| INFO2 | <eXutils.c: 738> DNS resolution with 202.26.159.130:5060
+| INFO1 | <jcallback.c: 236> Message sent: 
+REGISTER sip:202.26.159.130 SIP/2.0
+Via: SIP/2.0/UDP 172.28.20.2:5060;rport;branch=z9hG4bK585317710
+From: <sip:2501@202.26.159.130>;tag=1425632780
+To: <sip:2501@202.26.159.130>
+Call-ID: 266996998@172.28.20.2
+CSeq: 3 REGISTER
+Contact: <sip:2501@172.28.20.2:5060>
+Max-Forwards: 70
+User-Agent: SIP for APP ¦Â1
+Expires: 3600
+Content-Length: 0
+
+ (to dest=(unknown):5060)
+| INFO1 | <jcallback.c: 1865> cb_sndreq_retransmission (id=3)
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:4 usec:10000!
+| INFO2 | <eXutils.c: 673> IPv4 address detected: 202.26.159.130
+| INFO2 | <eXutils.c: 738> DNS resolution with 202.26.159.130:5060
+| INFO1 | <jcallback.c: 236> Message sent: 
+REGISTER sip:202.26.159.130 SIP/2.0
+Via: SIP/2.0/UDP 172.28.20.2:5060;rport;branch=z9hG4bK585317710
+From: <sip:2501@202.26.159.130>;tag=1425632780
+To: <sip:2501@202.26.159.130>
+Call-ID: 266996998@172.28.20.2
+CSeq: 3 REGISTER
+Contact: <sip:2501@172.28.20.2:5060>
+Max-Forwards: 70
+User-Agent: SIP for APP ¦Â1
+Expires: 3600
+Content-Length: 0
+
+ (to dest=(unknown):5060)
+| INFO1 | <jcallback.c: 1865> cb_sndreq_retransmission (id=3)
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:4 usec:10000!
+| INFO2 | <eXutils.c: 673> IPv4 address detected: 202.26.159.130
+| INFO2 | <eXutils.c: 738> DNS resolution with 202.26.159.130:5060
+| INFO1 | <jcallback.c: 236> Message sent: 
+REGISTER sip:202.26.159.130 SIP/2.0
+Via: SIP/2.0/UDP 172.28.20.2:5060;rport;branch=z9hG4bK585317710
+From: <sip:2501@202.26.159.130>;tag=1425632780
+To: <sip:2501@202.26.159.130>
+Call-ID: 266996998@172.28.20.2
+CSeq: 3 REGISTER
+Contact: <sip:2501@172.28.20.2:5060>
+Max-Forwards: 70
+User-Agent: SIP for APP ¦Â1
+Expires: 3600
+Content-Length: 0
+
+ (to dest=(unknown):5060)
+| INFO1 | <jcallback.c: 1865> cb_sndreq_retransmission (id=3)
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:0 usec:100000!
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:0 usec:100000!
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:0 usec:100000!
+| INFO1 | <jcallback.c: 436> cb_nict_kill_transaction (id=3)
+| INFO2 | <eXconf.c: 658> eXosip: Reseting timer to 15s before waking up!
+| INFO2 | <osip_transaction.c: 131> allocating transaction ressource 4 266996998
+| INFO2 | <nict.c: 34> allocating NICT context
+| INFO2 | <eXutils.c: 673> IPv4 address detected: 202.26.159.130
+| INFO2 | <eXutils.c: 738> DNS resolution with 202.26.159.130:5060
+| INFO1 | <jcallback.c: 236> Message sent: 
+REGISTER sip:202.26.159.130 SIP/2.0
+Via: SIP/2.0/UDP 172.28.20.2:5060;rport;branch=z9hG4bK961905560
+From: <sip:2501@202.26.159.130>;tag=1425632780
+To: <sip:2501@202.26.159.130>
+Call-ID: 266996998@172.28.20.2
+CSeq: 4 REGISTER
+Contact: <sip:2501@172.28.20.2:5060>
+Max-Forwards: 70
+User-Agent: SIP for APP ¦Â1
+Expires: 3600
+Content-Length: 0
+
+ (to dest=(unknown):5060)
+| INFO2 | <osip_transaction.c: 285> free transaction ressource 3 266996998
+| INFO2 | <nict.c: 123> free nict ressource
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:0 usec:100000!
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:0 usec:100000!
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:0 usec:100000!
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:0 usec:100000!
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:0 usec:100000!
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:0 usec:100000!
+| INFO2 | <eXutils.c: 673> IPv4 address detected: 202.26.159.130
+| INFO2 | <eXutils.c: 738> DNS resolution with 202.26.159.130:5060
+| INFO1 | <jcallback.c: 236> Message sent: 
+REGISTER sip:202.26.159.130 SIP/2.0
+Via: SIP/2.0/UDP 172.28.20.2:5060;rport;branch=z9hG4bK961905560
+From: <sip:2501@202.26.159.130>;tag=1425632780
+To: <sip:2501@202.26.159.130>
+Call-ID: 266996998@172.28.20.2
+CSeq: 4 REGISTER
+Contact: <sip:2501@172.28.20.2:5060>
+Max-Forwards: 70
+User-Agent: SIP for APP ¦Â1
+Expires: 3600
+Content-Length: 0
+
+ (to dest=(unknown):5060)
+| INFO1 | <jcallback.c: 1865> cb_sndreq_retransmission (id=4)
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:1 usec:10000!
+| INFO2 | <eXutils.c: 673> IPv4 address detected: 202.26.159.130
+| INFO2 | <eXutils.c: 738> DNS resolution with 202.26.159.130:5060
+| INFO1 | <jcallback.c: 236> Message sent: 
+REGISTER sip:202.26.159.130 SIP/2.0
+Via: SIP/2.0/UDP 172.28.20.2:5060;rport;branch=z9hG4bK961905560
+From: <sip:2501@202.26.159.130>;tag=1425632780
+To: <sip:2501@202.26.159.130>
+Call-ID: 266996998@172.28.20.2
+CSeq: 4 REGISTER
+Contact: <sip:2501@172.28.20.2:5060>
+Max-Forwards: 70
+User-Agent: SIP for APP ¦Â1
+Expires: 3600
+Content-Length: 0
+
+ (to dest=(unknown):5060)
+| INFO1 | <jcallback.c: 1865> cb_sndreq_retransmission (id=4)
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:2 usec:10000!
+| INFO2 | <eXutils.c: 673> IPv4 address detected: 202.26.159.130
+| INFO2 | <eXutils.c: 738> DNS resolution with 202.26.159.130:5060
+| INFO1 | <jcallback.c: 236> Message sent: 
+REGISTER sip:202.26.159.130 SIP/2.0
+Via: SIP/2.0/UDP 172.28.20.2:5060;rport;branch=z9hG4bK961905560
+From: <sip:2501@202.26.159.130>;tag=1425632780
+To: <sip:2501@202.26.159.130>
+Call-ID: 266996998@172.28.20.2
+CSeq: 4 REGISTER
+Contact: <sip:2501@172.28.20.2:5060>
+Max-Forwards: 70
+User-Agent: SIP for APP ¦Â1
+Expires: 3600
+Content-Length: 0
+
+ (to dest=(unknown):5060)
+| INFO1 | <jcallback.c: 1865> cb_sndreq_retransmission (id=4)
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:4 usec:10000!
+| INFO2 | <eXutils.c: 673> IPv4 address detected: 202.26.159.130
+| INFO2 | <eXutils.c: 738> DNS resolution with 202.26.159.130:5060
+| INFO1 | <jcallback.c: 236> Message sent: 
+REGISTER sip:202.26.159.130 SIP/2.0
+Via: SIP/2.0/UDP 172.28.20.2:5060;rport;branch=z9hG4bK961905560
+From: <sip:2501@202.26.159.130>;tag=1425632780
+To: <sip:2501@202.26.159.130>
+Call-ID: 266996998@172.28.20.2
+CSeq: 4 REGISTER
+Contact: <sip:2501@172.28.20.2:5060>
+Max-Forwards: 70
+User-Agent: SIP for APP ¦Â1
+Expires: 3600
+Content-Length: 0
+
+ (to dest=(unknown):5060)
+| INFO1 | <jcallback.c: 1865> cb_sndreq_retransmission (id=4)
+| INFO2 | <eXconf.c: 673> eXosip: timer sec:4 usec:10000!
+| INFO1 | <jreg.c: 76> Release a non-terminated transaction
+| INFO2 | <osip_transaction.c: 285> free transaction ressource 4 266996998
+| INFO2 | <nict.c: 123> free nict ressource
